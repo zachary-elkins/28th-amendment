@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="The 28th Amendment Project invites Americans to explore constitutional ideas from around the world and propose what should come next in the U.S. Constitution." />
+  <title>The 28th Amendment Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Franklin:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#12233b;--paper:#f6f1e8;--red:#b54537;--blue:#2d5c78;--line:#d9d1c4;--muted:#6d746f;--white:#fffdf8;--shadow:0 18px 50px rgba(18,35,59,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.55}a{color:inherit}button,a.button{font:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--red)}
+    header{position:sticky;top:0;z-index:10;background:rgba(246,241,232,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(18,35,59,.08)}nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:'Libre Franklin',sans-serif;font-weight:700;letter-spacing:-.02em}.navlinks{display:flex;gap:24px;font-size:.92rem}.navlinks a{text-decoration:none;color:#304057}.navlinks a:hover{color:var(--red)}
+    .hero{padding:92px 0 70px;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}.hero h1{font-family:'Source Serif 4',serif;font-size:clamp(3.4rem,8vw,7.6rem);line-height:.88;letter-spacing:-.055em;margin:.12em 0 .18em}.hero h1 span{display:block;color:var(--red)}.dek{font-family:'Source Serif 4',serif;font-size:clamp(1.25rem,2vw,1.65rem);max-width:720px;color:#344254}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{display:inline-block;text-decoration:none;border:1px solid var(--ink);padding:13px 18px;border-radius:999px;font-weight:700;transition:.2s}.button.primary{background:var(--ink);color:white}.button:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(18,35,59,.12)}
+    .amendment-card{background:var(--white);border:1px solid var(--line);padding:34px;box-shadow:var(--shadow);transform:rotate(1.2deg)}.roman{font-family:'Source Serif 4',serif;font-size:4rem;line-height:1;color:var(--red)}.amendment-card h2{font-family:'Source Serif 4',serif;font-size:2rem;margin:.35rem 0}.rule{height:1px;background:var(--line);margin:22px 0}.small{font-size:.9rem;color:var(--muted)}
+    section{padding:78px 0;border-top:1px solid rgba(18,35,59,.09)}.section-head{display:grid;grid-template-columns:.45fr 1fr;gap:40px;margin-bottom:38px}.section-head h2{font-family:'Source Serif 4',serif;font-size:clamp(2.2rem,4vw,4.3rem);line-height:.98;letter-spacing:-.04em;margin:0}.section-head p{font-size:1.08rem;max-width:700px;margin:.3rem 0 0;color:#445166}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:rgba(255,253,248,.7);border:1px solid var(--line);padding:28px;min-height:250px}.num{font-family:'Source Serif 4',serif;font-size:3rem;color:var(--red)}.step h3{font-size:1.1rem;margin:.3rem 0 .6rem}.step p{color:#566172;margin:0}.step .tag{display:inline-block;margin-top:18px;font-size:.77rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
+    .prompt-box{background:var(--ink);color:white;padding:44px;border-radius:2px;display:grid;grid-template-columns:1fr .8fr;gap:50px;align-items:center}.prompt-box h3{font-family:'Source Serif 4',serif;font-size:clamp(2.1rem,4vw,4rem);line-height:1;margin:0 0 16px}.prompt-box p{color:#dce4ee;max-width:680px}.prompt-box .button{border-color:white;color:white}.prompt-box .button.primary{background:white;color:var(--ink)}
+    .questions{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.question{border-top:3px solid var(--red);background:var(--white);padding:24px}.question h3{font-family:'Source Serif 4',serif;margin:0 0 6px;font-size:1.4rem}.question p{margin:0;color:#5c6673}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.proposal{background:var(--white);border:1px solid var(--line);padding:24px}.proposal .topic{font-size:.76rem;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.1em}.proposal blockquote{font-family:'Source Serif 4',serif;font-size:1.3rem;line-height:1.35;margin:15px 0}.proposal .source{font-size:.87rem;color:var(--muted)}
+    .note{padding:26px;border-left:4px solid var(--blue);background:rgba(45,92,120,.08);margin-top:26px}.footer{padding:46px 0 60px;border-top:1px solid var(--line);font-size:.9rem;color:#5d6671}.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+    @media(max-width:820px){.hero,.section-head,.prompt-box{grid-template-columns:1fr}.hero{gap:34px;padding-top:56px}.amendment-card{transform:none}.steps,.gallery,.questions{grid-template-columns:1fr}.navlinks{display:none}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav><div class="brand">THE 28TH AMENDMENT PROJECT</div><div class="navlinks"><a href="#how">How it works</a><a href="#research">Research</a><a href="#proposals">Proposals</a><a href="#about">About</a></div></nav></div></header>
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">A public experiment in constitutional imagination</div>
+      <h1>The Constitution <span>isn’t finished.</span></h1>
+      <p class="dek">If you could add one amendment to the U.S. Constitution, what would it be? Explore constitutional ideas from around the world, find one America is missing, and propose the 28th Amendment.</p>
+      <div class="actions"><a class="button primary" href="#start">Start exploring</a><a class="button" href="#research">Why this project?</a></div>
+    </div>
+    <aside class="amendment-card" aria-label="Project prompt">
+      <div class="roman">XXVIII</div>
+      <h2>What should come next?</h2>
+      <div class="rule"></div>
+      <p>More than 190 countries have written constitutions. Together they contain thousands of ideas about rights, government, democracy, equality, and public life.</p>
+      <p><strong>What can Americans learn from them?</strong></p>
+      <p class="small">The project uses Constitute, a global database of the world’s constitutions, as a source of ideas.</p>
+    </aside>
+  </div>
+
+  <section id="how"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">How it works</div><div><h2>Explore. Choose. Draft.</h2><p>This is not a quiz about constitutional law. It is an invitation to look beyond familiar choices and decide what belongs in America’s constitutional future.</p></div></div>
+    <div class="steps">
+      <article class="step"><div class="num">01</div><h3>Explore the world’s constitutions</h3><p>Browse rights and constitutional provisions using Constitute. Follow your curiosity: privacy, equality, the environment, education, democracy, technology, and more.</p><span class="tag">Discovery</span></article>
+      <article class="step"><div class="num">02</div><h3>Choose an idea worth borrowing</h3><p>Find a provision, principle, or approach that you think the United States should consider. Record the country and the provision that inspired you.</p><span class="tag">Selection</span></article>
+      <article class="step"><div class="num">03</div><h3>Write the 28th Amendment</h3><p>Translate the idea into your own constitutional language. Tell us why it belongs in the U.S. Constitution—and what problem you hope it would solve.</p><span class="tag">Constitution making</span></article>
+    </div>
+  </div></section>
+
+  <section id="start"><div class="wrap">
+    <div class="prompt-box">
+      <div><div class="eyebrow" style="color:#f1a395">Your turn</div><h3>What would you add?</h3><p>For the pilot, participants will begin with a short research survey, explore Constitute in a separate tab, and return to submit their proposed amendment.</p></div>
+      <div><div class="actions"><a class="button primary" href="#" onclick="alert('Qualtrics link coming next.');return false;">Begin the study</a><a class="button" href="https://www.constituteproject.org/" target="_blank" rel="noopener">Preview Constitute ↗</a></div><p class="small" style="color:#bfcbd8;margin-top:16px">Pilot link placeholder. No response data are collected on this website yet.</p></div>
+    </div>
+  </div></section>
+
+  <section id="research"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">The research</div><div><h2>What happens when Americans look outward?</h2><p>The project studies constitutional preferences, borrowing, and the effects of exposing citizens to constitutional alternatives beyond the United States.</p></div></div>
+    <div class="questions">
+      <article class="question"><h3>What do people want?</h3><p>Which rights and reforms rise to the top? Which divide people, and which attract surprisingly broad agreement?</p></article>
+      <article class="question"><h3>Where do ideas come from?</h3><p>Which constitutions, countries, and regions become sources of inspiration for Americans thinking about constitutional change?</p></article>
+      <article class="question"><h3>How do ideas travel?</h3><p>How does a provision written elsewhere change when an American participant translates it into a proposed U.S. amendment?</p></article>
+      <article class="question"><h3>Does exploration change attitudes?</h3><p>Does encountering unfamiliar constitutional possibilities affect confidence in the U.S. Constitution—or openness to changing it?</p></article>
+    </div>
+    <div class="note"><strong>Pilot principle:</strong> keep the first study focused. The initial instrument will prioritize the amendment selected, its source, the participant’s proposed text and rationale, and a short set of pre/post constitutional attitudes.</div>
+  </div></section>
+
+  <section id="proposals"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Coming soon</div><div><h2>What America is proposing</h2><p>Once the pilot launches, this section can become a live public gallery of proposed amendments and an aggregate view of the rights, countries, and ideas participants draw from.</p></div></div>
+    <div class="gallery">
+      <article class="proposal"><div class="topic">Example · Environment</div><blockquote>“Everyone has the right to a healthy and ecologically balanced environment.”</blockquote><div class="source">Inspired by environmental-rights provisions found in constitutions around the world.</div></article>
+      <article class="proposal"><div class="topic">Example · Privacy</div><blockquote>“The right of every person to control the collection and use of personal data shall not be infringed.”</blockquote><div class="source">Illustrative participant-style draft.</div></article>
+      <article class="proposal"><div class="topic">Example · Equality</div><blockquote>“Equality under the law shall not be denied on account of sex.”</blockquote><div class="source">Illustrative participant-style draft.</div></article>
+    </div>
+  </div></section>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">About</div><div><h2>A constitutional drafting lab for the public.</h2><p>The 28th Amendment Project grows out of research on public constitution making and earlier drafting exercises conducted with the National Constitution Center. It asks a simple question with a surprisingly global answer: when Americans are invited to imagine constitutional change, what do they choose?</p></div></div>
+  </div></section>
+</main>
+<footer class="footer"><div class="wrap footer-grid"><div>© 2026 The 28th Amendment Project</div><div>Research prototype · Built for GitHub Pages</div></div></footer>
+</body>
+</html>
